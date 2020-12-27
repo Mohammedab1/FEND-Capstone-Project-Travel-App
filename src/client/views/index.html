@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="shortcut icon" href="#">
+
+        <title>Capstone</title>
+
+    </head>
+
+    <body>
+
+        <header class="navbar navbar-default">
+            <div>
+                <p class="navbar-brand">Cpstone Travel App</p>
+            </div>
+            <div>
+
+            </div>
+        </header>
+        <main>
+            <section>
+              <div class="container">
+                  <form id="form" class="" method="POST">
+                      <div class="form-group">
+                          <div class="form-destination">
+                              <label for="Arrival">Origin</label>
+                              <input type="text" id="cityto" name="cityto" placeholder="EG. paris" />
+                          </div>
+                          <div class="form-destination">
+                              <label for="Origin">Destination</label>
+                              <input type="text" id="city" name="city" placeholder="EG. Riyadh" />
+                          </div>
+                          <div class="form-inline Dates">
+                              <label for="FromD" class="datelab">From</label>
+                              <input type="date" name="FromD" id="Datef" class="form-control mb-2 mr-sm-2 mb-sm-0"/>
+                              <label for="ToD" class="datelab Dimearr">To</label>
+                              <input type="date" name="ToD" id="Datet" class="form-control mb-2 mr-sm-2 mb-sm-0"/>
+
+                          </div>
+                          <div class="form-submit buttons">
+                              <input type="submit" class="btn btn-outline-success btn-sm" value="SEARCH" onclick="return Client.handleSubmit(event)" />
+                              <input type="reset" class="btn btn-outline-danger btn-sm" value="RESET" />
+                          </div>
+                      </div>
+                  </form>
+                 </div>
+            </section>
+            <section class="container">
+              <img  id="DesImage" src="" alt"">
+                <div class="Details">
+              <div id="Fromcity"></div>
+                <div id="DestnitionCity"></div>
+                <div id="TravelDates"></div>
+                <div id="Duration"></div>
+
+                <div>
+                  <p id="High"></p>
+                  <p id="Lowest"></p>
+                </div>
+  </div>
+            </section>
+        </main>
+
+        <footer>
+          <div class="footer-padding"></div>
+  <div class="footer" id="footerH">
+    <p> Copuright Mohammed Abahussain Uedacity Front-End 2020</p>
+  </div>
+        </footer>
+
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+           </script>
+    </body>
+</html>
